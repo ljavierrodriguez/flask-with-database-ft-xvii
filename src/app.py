@@ -9,8 +9,8 @@ app.config['DEBUG'] = True # Para poder depurar los errores
 app.config['ENV'] = 'development' # Entorno de desarrollo
 app.config['SQLALCHEMY_TRACK_MODIFICACIONS'] = False # Control de Cambios en SQLAlchemy
 #app.config['SQLALCHEMY_DATABASE_URI'] = "dialect+driver://<user>:<pass>@<host>:<port>/<dbname>"
-#app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root@localhost:3306/prueba" # Conexion a la base de datos
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root@localhost:3306/prueba" # Conexion a la base de datos
+#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
 
 db.init_app(app) # vinculo entre mi app y mis modelos de la base de datos
 Migrate(app, db) # db init, db migrate, db upgrade || db downgrade
